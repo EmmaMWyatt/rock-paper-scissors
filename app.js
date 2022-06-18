@@ -1,5 +1,26 @@
 
 
+function playRound(computerSelection,playerSelection){
+    
+    if (computerSelection === playerSelection) {
+        /* draw */
+    }
+    if (computerSelection === "rock" && playerSelection === 'scissors' ) {
+        /*computer wins*/
+    }
+    if (computerSelection === "scissors" && playerSelection === 'paper') {
+        /*computer wins*/
+    }
+    if (computerSelection === "paper" && playerSelection === 'rock'){
+        /*computer wins*/
+    }
+    else {
+        /*player wins*/
+    }
+    
+
+}
+
 function PlayerPlay(){
     do{
         playerSelection = prompt("Please enter Rock, Paper or Scissors: ");
