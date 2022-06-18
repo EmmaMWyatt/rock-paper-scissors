@@ -1,16 +1,20 @@
 let computerScore = 0;
 let playerScore = 0;
+theresAWinner = false;
 
 game()
 
 function game() {
     console.log("let's play Rock Paper Scissors, first to 5 wins!")
+    
     do {
     playRound(computerPlay(),PlayerPlay())
     console.log("the score is Computer: " + computerScore + " Player: " + playerScore)
 
-    } while (playerScore <= 5 && computerScore <= 5);
-    
+    if(playerScore === 5 || computerScore === 5) {
+        theresAWinner = true;
+    }
+    } while (theresAWinner === false);
     if(playerScore === 5) {
         console.log("congratulations you win!")
     }
