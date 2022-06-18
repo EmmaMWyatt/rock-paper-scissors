@@ -6,7 +6,7 @@ game()
 
 function game() {
     console.log("let's play Rock Paper Scissors, first to 5 wins!")
-    
+
     do {
     playRound(computerPlay(),PlayerPlay())
     console.log("the score is Computer: " + computerScore + " Player: " + playerScore)
@@ -15,6 +15,7 @@ function game() {
         theresAWinner = true;
     }
     } while (theresAWinner === false);
+    
     if(playerScore === 5) {
         console.log("congratulations you win!")
     }
@@ -52,6 +53,7 @@ function playRound(computerSelection,playerSelection){
 }
 
 function PlayerPlay(){
+    /* check if players input is valid */
     do{
         playerSelection = prompt("Please enter Rock, Paper or Scissors: ");
         playerSelection = playerSelection.toLowerCase();
@@ -65,6 +67,7 @@ function PlayerPlay(){
 
 
 function computerPlay(){
+    /* randomly select rock paper or scissors */
     let x = Math.floor(Math.random()* 3);
     if (x == 0) {
         computerSelection = "rock";
