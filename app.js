@@ -1,14 +1,28 @@
 
+
+function PlayerPlay(){
+    do{
+        playerSelection = prompt("Please enter Rock, Paper or Scissors: ");
+        playerSelection = playerSelection.toLowerCase();
+        
+        if (playerSelection === "rock"|| playerSelection === 'paper' || playerSelection === 'scissors') {
+        return playerSelection; 
+        }
+
+    } while (true)
+}
+
+
 function computerPlay(){
     let x = Math.floor(Math.random()* 3);
     if (x == 0) {
-        result = "Rock";
+        computerSelection = "rock";
     }
     if (x == 1) {
-        result = 'Paper';
+        computerSelection = 'paper';
     }
     if (x == 2) {
-        result = 'Scissors';
+        computerSelection = 'scissors';
     }
-    return result
+    return computerSelection;
 }
