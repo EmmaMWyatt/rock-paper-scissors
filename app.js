@@ -1,21 +1,39 @@
+let computerScore = 0;
+let playerScore = 0;
 
+game()
+
+function game() {
+
+    do {
+    playRound(computerPlay(),PlayerPlay())
+
+    } while (playerScore < 5 || computerScore < 5)
+
+
+}
 
 function playRound(computerSelection,playerSelection){
     
     if (computerSelection === playerSelection) {
-        /* draw */
+        console.log("you played " + playerSelection + " and the computer played " + computerSelection + ". It's a draw!")
+        return;
     }
     if (computerSelection === "rock" && playerSelection === 'scissors' ) {
-        /*computer wins*/
+        console.log("you played " + playerSelection + " and the computer played " + computerSelection + ". You lost this round!")
+        return computerScore = computerScore + 1;
     }
     if (computerSelection === "scissors" && playerSelection === 'paper') {
-        /*computer wins*/
+        console.log("you played " + playerSelection + " and the computer played " + computerSelection + ". You lost this round!")
+        return computerScore = computerScore + 1;
     }
     if (computerSelection === "paper" && playerSelection === 'rock'){
-        /*computer wins*/
+        console.log("you played " + playerSelection + " and the computer played " + computerSelection + ". You lost this round!")
+        computerScore = computerScore + 1;
     }
     else {
-        /*player wins*/
+        console.log("you played " + playerSelection + " and the computer played " + computerSelection + ". You won this round!")
+        return playerScore = playerScore +1;
     }
     
 
