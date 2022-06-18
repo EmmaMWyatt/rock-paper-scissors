@@ -4,13 +4,21 @@ let playerScore = 0;
 game()
 
 function game() {
-
+    console.log("let's play Rock Paper Scissors, first to 5 wins!")
     do {
     playRound(computerPlay(),PlayerPlay())
+    console.log("the score is Computer: " + computerScore + " Player: " + playerScore)
 
-    } while (playerScore < 5 || computerScore < 5)
+    } while (playerScore <= 5 && computerScore <= 5);
+    
+    if(playerScore === 5) {
+        console.log("congratulations you win!")
+    }
+    else {
+        console.log("Bad luck! You lost")
+    }
 
-
+    return;
 }
 
 function playRound(computerSelection,playerSelection){
