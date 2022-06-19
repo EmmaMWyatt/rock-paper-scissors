@@ -2,6 +2,15 @@ let computerScore = 0;
 let playerScore = 0;
 theresAWinner = false;
 
+let buttons = document.querySelectorAll(".button");
+
+buttons.forEach(button => {
+    button.addEventListener("click",() => {
+        PlayerPlay(button.id);
+    })
+});
+
+
 game()
 
 function game() {
@@ -51,18 +60,9 @@ function playRound(computerSelection,playerSelection){
     
 
 }
-
-function PlayerPlay(){
-    /* check if players input is valid */
-    do{
-        playerSelection = prompt("Please enter Rock, Paper or Scissors: ");
-        playerSelection = playerSelection.toLowerCase();
-        
-        if (playerSelection === "rock"|| playerSelection === 'paper' || playerSelection === 'scissors') {
-        return playerSelection; 
-        }
-
-    } while (true)
+//should take in a variable from button that says what the player pressed
+function PlayerPlay(playerSelection){
+    return playerSelection
 }
 
 
